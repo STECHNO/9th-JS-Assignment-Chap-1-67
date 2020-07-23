@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+    <a href="" onclick="alert('Alert From onClick Event')">Link</a>
+    </div>
+
+
+
+
+
+<div>
+    <div class="bor">
+        <img src="images/iphone7.png" onClick="alert('Thank you for purshasing a phone from us');">
+        <p>Iphone 7</p>
+    </div>
+    <div class="bor">
+        <img src="images/SMG7.jpg" onClick="alert('Thank you for purshasing a phone from us');">
+        <p>Samsung S7</p>
+    </div>
+    <div class="bor">
+        <img src="images/xperia-xz.jpg" onClick="alert('Thank you for purshasing a phone from us');">
+        <p>Sony Xperia XZ</p>
+    </div>
+    <div class="bor">
+        <img src="images/huw.jpg" onClick="alert('Thank you for purshasing a phone from us');">
+        <p>Huawei</p>
+    </div>
+</div>
+
+<br />
+
+<div>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Class</th>
+        </tr>
+        <tr class="num" id="jhone">
+            <td id="inn0"></td>
+            <td>Jhone</td>
+            <td>10</td>
+            <td><input type="button" value="Delete" onclick="deletJhone()"></td>
+        </tr>
+        <tr class="num" id="doe">
+            <td id="inn1"></td>
+            <td>Doe</td>
+            <td>9</td>
+            <td><input type="button" value="Delete"></td>
+        </tr>
+        <tr class="num" id="mark">
+            <td id="inn2"></td>
+            <td>Mark</td>
+            <td>10</td>
+            <td><input type="button" value="Delete"></td>
+        </tr>
+        <tr class="num" id="james">
+            <td id="inn3"></td>
+            <td>James</td>
+            <td>8</td>
+            <td><input type="button" value="Delete"></td>
+        </tr>
+        <tr class="num" id="james">
+            <td id="inn4"></td>
+            <td>John</td>
+            <td>5</td>
+            <td><input type="button" value="Delete"></td>
+        </tr>
+        <tr class="num" id="james">
+            <td id="inn5"></td>
+            <td>Henry</td>
+            <td>7</td>
+            <td><input type="button" value="Delete"></td>
+        </tr>
+        <tr class="num" id="james">
+            <td id="inn6"></td>
+            <td>Tom</td>
+            <td>4</td>
+            <td><input type="button" value="Delete"></td>
+        </tr>
+        <tr class="num" id="james">
+            <td id="inn7"></td>
+            <td>Liana</td>
+            <td>1</td>
+            <td><input type="button" value="Delete"></td>
+        </tr>
+        <tr class="num" id="james">
+            <td id="inn8"></td>
+            <td>James</td>
+            <td>9</td>
+            <td><input type="button" value="Delete"></td>
+        </tr>
+        <tr class="num" id="james">
+            <td id="inn9"></td>
+            <td>Bravo</td>
+            <td>6</td>
+            <td><input type="button" value="Delete"></td>
+        </tr>
+    </table>
+</div>
+
+<br/>
+
+<div class="image">
+    <img src="images/earth1.jpg" alt="Earth View" id="img" onmouseover="changeImg('img', 'images/earth2.jpg')" onmouseout="changeImg('img', 'images/earth1.jpg')">
+</div>
+
+<div>
+    <button id="inc" onclick="increase()">Increase</button>
+    <input id="counter" type="number">
+    <button id="dec" onclick="decrease()">Decrease</button>
+</div>
+
+</body>
+<script src="app.js"></script>
+
+</html>

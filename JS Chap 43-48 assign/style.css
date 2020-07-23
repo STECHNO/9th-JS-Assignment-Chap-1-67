@@ -1,0 +1,35 @@
+.bor{
+    width: 150px;
+    height: 300px;
+    display: inline-block;
+    margin: 30px;
+}
+
+img{
+    height: 300px;
+    width: 100%;
+}
+
+p{
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
+.image{
+    width: 400px;
+    height: 350px;
+}
+
+input[type=number] {
+    height: 30px;
+    width: 90px;
+    text-align: center;
+}
+
+button{
+    height: 35px;
+    width: 90px;
+}

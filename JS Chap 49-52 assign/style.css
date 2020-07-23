@@ -1,0 +1,19 @@
+.form{
+    width: 600px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+
+.submit{
+    text-align: center;
+}
+
+.bor {
+    width: 45% !important;
+    height: 15px !important;
+}
+
+.form h2{
+    text-align: center;
+}
