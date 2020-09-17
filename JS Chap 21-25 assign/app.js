@@ -130,29 +130,76 @@ if (matchFound === false) {
 
 //q14 end
 
-var userp = prompt("Please enter your password (at least 6 characters).");
-var firstChar = userp.charCodeAt(0);
 
-if (firstChar > 48 && firstChar < 57) {
-    document.write("Entered password: " + userp + "<br />");
-    document.write("Password can not begin with a number" + "<br />");
-    document.write("Please enter a valid password");
+var allowedCharacters = [];
+
+for (var j = 65; j <= 90; j++) {
+    allowedCharacters.push(j);
 }
-else if (userp.length < 6) {
-    document.write("Password must be 6 characters long");
+for (var k = 97; k <= 122; k++) {
+    allowedCharacters.push(k);
+}
+for (var l = 48; l <= 57; l++) {
+    allowedCharacters.push(l);
 }
 
-// for(var i = 0; i < userp.length; i++){
-//     if((userp.charCodeAt(i) > 97 && userp.charCodeAt(i) < 122) && (userp.charCodeAt(i) > 65 && userp.charCodeAt(i) < 90) && (userp.charCodeAt(i) > 48 && userp.charCodeAt(i) < 57) && userp.length > 6) {
-//         console
-//         document.write("Your Password is valid: " + userp + "<br />");
-//     }
-// }
 
-// else if (userp.length == 6) {
-//     document.write("Your Entered password is: " + userp + "<br />");
-// }
+var pass = prompt("Please enter your password at least 6 characters.");
+var arr = []
+var matchFound = true;
+var numPassError = true;
+var enterValidPass = true;
 
+if (pass == null) {
+    document.write("Try Again");
+}
+
+function passValidation() {
+
+    for (var i = 0; i < pass.length; i++) {
+        arr.push(pass.charCodeAt(i))
+    }
+
+    if (arr.length == 0) {
+        document.write("Password can not be empty");
+        return false;
+    }
+    else if (pass.length < 6) {
+        document.write("Password must be 6 characters long");
+        matchFound = false;
+        return false;
+    }
+
+
+    var firstChar = arr[0];
+
+    for (var m = 0; m < pass.length; m++) {
+        var pos = allowedCharacters.indexOf(arr[m])
+        if (pos === -1) {
+            matchFound = false;
+            enterValidPass = false;
+        }
+        else if (pos !== -1 && (firstChar >= 48 && firstChar <= 57)) {
+            matchFound = false;
+            numPassError = false;
+        }
+    }
+
+    if (matchFound == true) {
+        document.write("Your Password is valid: " + pass + "<br />");
+    }
+    else if (numPassError == false) {
+        document.write("Entered password: " + pass + "<br />");
+        document.write("Password can not begin with a number" + "<br />");
+        document.write("Please enter a valid password");
+    }
+    else if (enterValidPass == false) {
+        document.write("Please Enter a valid password" + "<br />");
+        document.write("Please should be alphabets and numbers & should not start with a number, it must at least 6 characters long");
+    }
+}
+
+passValidation()
 
 
 //q15 end
@@ -185,4 +232,3 @@ for (var i = 0; i < str.length; i++) {
 document.write("There are " + count + " occurence(s) of word 'the'");
 
 //q18 end
-
